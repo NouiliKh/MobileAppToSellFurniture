@@ -19,6 +19,9 @@ public class SqliteHelper extends SQLiteOpenHelper{
     //TABLE NAME
     public static final String TABLE_USERS = "users";
 
+    //TABLE NAME
+    public static final String TABLE_PRODUCTS = "products";
+
     //TABLE USERS COLUMNS
     //ID COLUMN @primaryKey
     public static final String KEY_ID = "id";
@@ -42,6 +45,38 @@ public class SqliteHelper extends SQLiteOpenHelper{
             + " ) ";
 
 
+    public static final String KEYP_ID = "id";
+
+    //COLUMN product name
+    public static final String KEY_PRODUCT_NAME = "productname";
+
+    //COLUMN description of product
+    public static final String KEY_DESCRIPTION = "description";
+
+    //COLUMN category
+    public static final String KEY_CATEGORY = "category";
+
+    //COLUMN category
+    public static final String KEY_PRICE = "price";
+
+    //COLUMN category
+    public static final String KEY_PHOTO = "photo";
+
+    //SQL for creating users table
+    public static final String SQL_TABLE_PRODUCTS = " CREATE TABLE " + TABLE_PRODUCTS
+            + " ( "
+            + KEYP_ID + " INTEGER PRIMARY KEY, "
+            + KEY_PRODUCT_NAME + " TEXT, "
+            + KEY_DESCRIPTION + " TEXT, "
+            + KEY_CATEGORY + " TEXT, "
+            + KEY_PRICE + " TEXT, "
+            + KEY_PHOTO + " BLOB"
+            + " ) ";
+
+
+
+
+
     public SqliteHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -50,6 +85,8 @@ public class SqliteHelper extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         //Create Table when oncreate gets called
         sqLiteDatabase.execSQL(SQL_TABLE_USERS);
+        sqLiteDatabase.execSQL(SQL_TABLE_PRODUCTS);
+
 
     }
 

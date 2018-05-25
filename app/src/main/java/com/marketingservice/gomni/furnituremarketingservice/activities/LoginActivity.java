@@ -58,10 +58,11 @@ public class LoginActivity extends AppCompatActivity{
                     if (currentUser != null) {
                         Snackbar.make(buttonLogin, "Successfully Logged in!", Snackbar.LENGTH_LONG).show();
 
+
                         //User Logged in Successfully Launch You home screen activity
-                       /* Intent intent=new Intent(LoginActivity.this,HomeScreenActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, ConsultingActivity.class);
                         startActivity(intent);
-                        finish();*/
+
                     } else {
 
                         //User Logged in Failed
@@ -79,7 +80,7 @@ public class LoginActivity extends AppCompatActivity{
     // for TextView yet not supported in Xml so i have done it programmatically)
     private void initCreateAccountTextView() {
         TextView textViewCreateAccount = (TextView) findViewById(R.id.textViewCreateAccount);
-        textViewCreateAccount.setText(fromHtml("<font color='#ffffff'>I don't have account yet. </font><font color='#0c0099'>create one</font>"));
+        textViewCreateAccount.setText(fromHtml("<font color='#ffffff'>I don't have account yet. </font><font color='#AC4B65'>create one</font>"));
         textViewCreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
