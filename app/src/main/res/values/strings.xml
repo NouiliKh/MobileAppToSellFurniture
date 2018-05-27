@@ -10,4 +10,14 @@
     <string name="productname">Product Name</string>
     <string name="price">Price</string>
     <string name="description">Description</string>
+    <string name="addproduct">Add Product</string>
+    <string name="editproduct">Edit Product</string>
+
+
+    <string name="country_prompt"> <font color="#9C9C9C"> Category </font></string>
+    <string-array name="country_arrays">
+        <item><font color="#1A2B30">Category</font></item>
+        <item>Real Estate</item>
+        <item>Furniture</item>
+    </string-array>
 </resources>

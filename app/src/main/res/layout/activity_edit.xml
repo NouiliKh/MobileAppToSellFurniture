@@ -107,13 +107,13 @@
         </android.support.design.widget.TextInputLayout>
 
         <Button
-            android:id="@+id/buttonAddProduct"
+            android:id="@+id/buttonEditProduct"
             android:layout_width="344dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
             android:background="@color/colorAccent"
-            android:text="@string/addproduct"
+            android:text="@string/editproduct"
             android:textColor="@android:color/white" />
 
         <TextView
